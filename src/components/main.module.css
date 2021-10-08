@@ -1,0 +1,76 @@
+.mainContainer{
+    width: 98%;
+    height: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.45fr 2.06fr 2.13fr 3.3fr 2.1fr;
+    grid-template-areas: 
+      "header header header header"
+      "banner banner banner banner"
+      "activity activity activity activity"
+      "infographic infographic infographic infographic "
+      "data data data data"
+      ;
+     grid-gap: 2rem 2rem;
+     padding: 2rem
+      
+    
+}
+
+.bannerContainer{
+    display: flex;
+    grid-area: banner;
+    align-self:center;
+    justify-self: center;
+    margin-top: 3.2rem;
+}
+
+.headerContainer{
+    grid-area: header;
+    justify-self: center;
+}
+
+.activitiesContainer{
+    display: flex;
+    grid-area: activity;
+    justify-content: space-evenly;
+    
+}
+.infographicsContainer{
+grid-area: infographic;
+display: flex;
+justify-content: space-evenly;
+
+}
+.dataContainer{
+    grid-area: data;
+    display: flex;
+    align-items: center;
+
+justify-self:center;
+justify-content: space-evenly;
+    
+background-color: var(--section-color);
+height: 21.9rem;
+width: 106.0rem;
+
+border-radius: 24px;
+padding: 32px, 24px, 32px, 0px;
+
+}
+.icon{
+    fill: #006BE9;
+
+}
+.iconBody{
+    width:4.2rem ;
+    height: 4.2rem ;
+    border-radius: 50%;
+ background: #006BE94D;
+ display:flex;
+ 
+ justify-content: center;
+ align-items: center
+;
+}

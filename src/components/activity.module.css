@@ -1,0 +1,63 @@
+.activityContainer{
+height: 17rem;
+width: 20.2rem;
+border-radius: 24px;
+padding: 24px 24px 32px 24px;
+background-color: var(--section-color);
+display: flex;
+flex-direction: column;
+
+}
+.activity{
+    color: #FEFFFF;
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+}
+
+
+.activity_difference{
+    color: #1DB954;
+    font-size: 1.4rem;
+    margin-left: .8rem;
+}
+.activity_value{
+   margin-top: .4rem;
+    font-size: 2.4rem;
+}
+.activity_box{
+    padding-bottom: .5rem;
+    height: auto;
+    width: auto;
+    border-bottom: 1px solid #8e9ba484;
+}
+
+.activity_description{
+    font-size: 1.2rem;
+    color: #FEFFFF
+}
+.activity_descriptionbx{
+    margin-top: 1rem;
+}
+.activity_subdescription{
+    font-size: 1.2rem;
+    color: #FEFFFF;
+    margin-top: 1.4rem;
+    
+}
+.line{
+    background-color:8E9BA4;
+     border: 1px solid #8E9BA4;
+}
+.activity_top{
+    display: flex;
+    align-items: center;
+
+}
+.activity_unitValue{
+    font-size: 1.4rem;
+    /* margin-left: 10px; */
+}
+.progress{
+    margin-left: 2.6rem;
+    display: flex;
+}

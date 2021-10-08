@@ -1,0 +1,10 @@
+.container{
+    width: 52rem;
+    background-color: var(--section-color);
+    height: 350px;
+width: 520px;
+
+border-radius: 24px;
+padding: 24px, 24px, 32px, 24px;
+
+}

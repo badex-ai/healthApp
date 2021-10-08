@@ -1,0 +1,11 @@
+.container{
+  background-color:var(--background-color) ;
+  /* height :50rem; */
+  display: grid;
+  grid-template-columns: 21% 75%;
+  position: relative;
+  
+  
+  
+
+}

@@ -1,0 +1,56 @@
+.container{
+    width: 106rem;
+    height: 22rem;
+    grid-area: header; 
+    background: #1993FC;
+    border-radius: 24px;
+    background-image: url('../icons/Mask\ Group.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+
+}
+
+.textContainer{
+    width: 37.3rem;
+    height: 16rem;
+    display: flex;
+  
+   margin-top: 2.4rem;
+   margin-left: 2.4rem;
+}
+.icon{
+    width: 4.2rem;
+    height: 4.2rem;
+    background-color: white;
+
+}
+.textbox{
+    width: 31.7rem;
+    height: 7.4rem;
+    margin-left: 1.4rem;
+}
+.text{
+    font-size: 2.4rem;
+
+}
+.subtext{
+    font-size: 1.4rem;
+    margin-top: .8rem;
+}
+
+.cta{
+    background-color: #fff;
+    color: #1D9BF0;
+    height: 4.2rem;
+    width: 18.8rem;
+    display: flex;
+    font-size: 1.6rem;
+    border-radius: 32px;
+    margin-top: 4rem;
+    align-items: center;
+    justify-content: space-around;
+
+
+
+
+}

@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background-color: #16202A;
+  --section-color: #121921;
+  --header-color: #1993FC;
+  --love: #EF5DA8;
+  --num-color: #a5a5a5;
+  --light-grey: #fafafa;
+  --dark-grey: #f2f2f2;
+  --border: 1px solid rgba(245, 255, 248, 0.3);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  font-family: "CircularStd";
+  color: white
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+button,
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face{
+  font-family: "CircularStd";
+  src: local("CircularStd"),
+  url("./fonts/CircularStd-Medium.otf") format("opentype");
+  font-weight: 400;
 }
