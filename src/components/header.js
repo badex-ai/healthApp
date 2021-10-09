@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './header.module.css';
 import Notif from '../icons/notification';
 import Search from '../icons/search';
-import ListIcon from '../icons/list-icon';
 
 function Header() {
     return (
@@ -22,9 +21,10 @@ function Header() {
                 <div className={classes.duration}>
                     <div className={classes.duration_val} >
                         <select name="duration" id="duration">
-                        <option value="weeks">Volvo</option>
-                        <option value="month">Saab</option>
-                        <option value="year">Mercedes</option>
+                        <option value="week">today</option>
+                        <option value="weeks">week</option>
+                        <option value="month">month</option>
+                        <option value="year">year</option>
                         </select>
                     </div>
                    

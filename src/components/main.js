@@ -5,16 +5,24 @@ import Banner from './banner'
 import Header from './header';
 import Infographic from './infographic';
 import Data from './data';
-import IconCont from './iconContainer';
 import Energy from '../icons/energy';
 import Sleep from '../icons/sleep';
 import Time from '../icons/time';
 import Steps from '../icons/steps';
 import Inc from '../icons/inc';
 import Dec from '../icons/dec';
+import Power from '../icons/power';
+import Summary from '../icons/summary';
+import Heartpink from '../icons/heart-pink';
 
 
 function Main() {
+
+    let selector= <select  name="duation" id="duration">
+                    <option value="week">week</option>
+                     <option value="month">month</option>
+                    <option value="year">year</option>
+                    </select>
 
     
     return (
@@ -35,16 +43,24 @@ function Main() {
 
             </div>
             <div className={classes.infographicsContainer}>
-            <Infographic></Infographic>
-            <Infographic></Infographic>
+            <Infographic icon={<Summary/>} subtext={'You reached your steps target once this week.'} maintext={'weekly summary (12 Sep - 19 sep 2021)'}  selector={selector} ></Infographic>
+            <Infographic icon={<Power/>} subtext={'19 Sep, 2021'} maintext={'today’s acivity'}  selector={null}></Infographic>
           
 
             </div>
             <div className={classes.dataContainer}>
-            <Data></Data>
-            <Data></Data>
-            <Data></Data>
-            <Data></Data>
+            <div className={classes.info}>
+                <div><Heartpink/></div>
+                <div  className={classes.info_txt} >YOUR HEALTH STATUS</div>
+                <div className={classes.info_sub}>Awesome!You are in great shape!</div>
+            </div>
+            <div className={classes.dataBox}>
+                <Data variable={'weight'}  value={62.5}   unit={'kg'} ></Data>
+                <Data variable={'Blood Pressure'}  value={'123/85'}   unit={'mmHg'} ></Data>
+                <Data variable={'Blood Gluscose'}  value={'123/85'}   unit={'mgdL'} ></Data>
+                <Data variable={'Body Mass Index'}  value={'123/85'}   unit={'kg/m' }></Data>
+          
+            </div>
             </div>
           
         </div>

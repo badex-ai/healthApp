@@ -4,12 +4,13 @@
     grid-area: header; 
     background: #1993FC;
     border-radius: 24px;
-    background-image: url('../icons/Mask\ Group.svg');
+    background-image: url('../assets/banner.svg');
     background-position: right;
     background-repeat: no-repeat;
 
 }
-
+.go{margin-left: 1.6rem;
+text-align: center;}
 .textContainer{
     width: 37.3rem;
     height: 16rem;
@@ -44,7 +45,7 @@
     height: 4.2rem;
     width: 18.8rem;
     display: flex;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     border-radius: 32px;
     margin-top: 4rem;
     align-items: center;

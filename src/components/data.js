@@ -1,10 +1,11 @@
 import React from 'react';
 import classes from './data.module.css'
 
-function data() {
+function data(props) {
     return (
         <div className={classes.container}>
-            This is the data side
+            <div className={classes.top}> {props.variable}</div>
+            <div className={classes.bottom}>{props.value} <div className={classes.unit}>{props.unit}</div></div>
         </div>
     )
 }

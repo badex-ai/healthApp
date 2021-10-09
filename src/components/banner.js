@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './banner.module.css';
 import Topheart from '../icons/top-heart';
+import Go from '../icons/go';
 
 function header() {
     return (
@@ -13,9 +14,8 @@ function header() {
                         The first to complete an activity wins.
                     </div>
                     <div className={classes.cta}>
-                        
-                        <div>Start Challenge</div>
-                        <div>---></div>
+                        <div>Start a Challenge<span className={classes.go}><Go/></span></div>
+                        <div></div>
                         </div>
                 </div>
             </div>

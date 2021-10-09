@@ -2,30 +2,36 @@
     width: 100%;
     height: 100%;
     display: flex;
-    /* position: fixed; */
-    /* display: fixed; */
     background-color: var(--section-color);
     justify-content: center;
+    
 
 }
 .navbox{
     position: fixed;
     height: 100vh;
     width: 23.5rem;
-    /* background-color:red; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
     
 }
 .navs{
-    height: 30.4rem;
-    width: auto
+    height: auto;
+    width: auto;
+    margin-top: 4.7rem;
+    
 }
 
 .profile{
     display: flex;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #FEFFFF;
     justify-content: space-evenly;
+    align-items: center;
+    margin-top: 16.5rem;
 }
 .profile_pic{
     width: 4.2rem;
@@ -33,15 +39,31 @@
     background-color: grey;
     border-radius: 50%;
     text-align: center;
+    margin-right: 1.6rem;
+}
+.nav_txt{
+    margin-left: .8rem
 }
 .nav{
-    width: 21.8rem;
+    display: flex;
+    width: 18.6rem;
     font-size: 1.6rem;
-    height: 4.8rem;
-    Padding :16px, 8px, 16px, 24px;
+    Padding :1.6rem .8rem 1.6rem 2.4rem;
     text-align: center;
 }
+nav:not(:last-child){
+    margin-bottom: 1.6rem;
+
+}
 .logo{
-    width: 17.7rem;
-    height: 4.4rem
+    width: 21.8rem;
+    height: 4.4rem;
+    margin-top: 5.1rem;
+    display: flex;
+    justify-content: flex-start;
+   
+}
+.logout{
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
 }

@@ -1,8 +1,40 @@
 .container{
 height: 141px;
 width: 141px;
-background: #C4C4C4;
-opacity: 0.1;
+background: rgba(254, 255, 255, 0.1);;
 border-radius: 24px;
+display: flex;
+flex-direction: column;
+align-items: center;
+color: white;
+justify-content: center;
 
+}
+
+.top{
+    width: 12rem;
+    height: auto;
+    padding-bottom: 10px;
+    /* background-color: yellow; */
+    font-size: 1.4rem;
+    text-align: center;
+
+}
+
+.bottom{
+    width: 9rem;
+    font-size: 2.4rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #8e9ba484;
+    /* background-color: green; */
+}
+
+.unit{
+    font-size: 1.4rem;
+    text-align: center;
 }
