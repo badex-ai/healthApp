@@ -14,10 +14,18 @@ import Dec from '../icons/dec';
 import Power from '../icons/power';
 import Summary from '../icons/summary';
 import Heartpink from '../icons/heart-pink';
+import Selector from './selector';
+import Search from './search';
+
 
 
 function Main() {
-
+    let color= "#feffff1a"
+    const title =  <div className={classes.header_title}>Dashboard Overview</div>;
+       const date=  <div className={classes.date} >
+            {new Date().toISOString()}
+        </div>
+    
     let selector= <select  name="duation" id="duration">
                     <option value="week">week</option>
                      <option value="month">month</option>
@@ -29,7 +37,7 @@ function Main() {
 
         <div className={classes.mainContainer}>
             <div className={classes.headerContainer}>
-                <Header></Header>
+                <Header date={date} title={title} search={<Search/>} selector={<Selector/>}></Header>
             </div>
             <div className={classes.bannerContainer}>
                 <Banner></Banner>
@@ -55,10 +63,10 @@ function Main() {
                 <div className={classes.info_sub}>Awesome!You are in great shape!</div>
             </div>
             <div className={classes.dataBox}>
-                <Data variable={'weight'}  value={62.5}   unit={'kg'} ></Data>
-                <Data variable={'Blood Pressure'}  value={'123/85'}   unit={'mmHg'} ></Data>
-                <Data variable={'Blood Gluscose'}  value={'123/85'}   unit={'mgdL'} ></Data>
-                <Data variable={'Body Mass Index'}  value={'123/85'}   unit={'kg/m' }></Data>
+                <Data color={color} variable={'weight'}  value={62.5}   unit={'kg'} ></Data>
+                <Data color={color} variable={'Blood Pressure'}  value={'123/85'}   unit={'mmHg'} ></Data>
+                <Data  color={color} variable={'Blood Gluscose'}  value={'123/85'}   unit={'mgdL'} ></Data>
+                <Data color={color} variable={'Body Mass Index'}  value={'123/85'}   unit={'kg/m' }></Data>
           
             </div>
             </div>

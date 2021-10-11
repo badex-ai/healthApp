@@ -1,6 +1,6 @@
 .container{
     height: 4.8rem;
-    /* background-color: cadetblue; */
+    
     margin-top: 4.2rem;
     width: 106.2rem;
     display: flex;
@@ -16,53 +16,19 @@
     flex-direction: column;
 
 }
-.date{
-    font-size: 1.4rem;
-    color: #FEFFFF
-}
+
 .header_right{
     width: 56.2rem;
     height: inherit;
-    /* background-color: yellow; */
     display:flex;
     align-items: center;
     justify-content: space-between;
 }
-.searchbar{
-    width: 31.8rem;
-    border: 1px solid white;
-    border-radius: 50px;
-    height: 42px;
-    padding-left: 1.8rem ;
-    padding-right: 1.8rem;
-    display: flex;
-    align-items: center;
+.header_right_sm{
+    width: auto;
+    height: inherit;
 }
 
-.duration{
-    display :flex;
-    Width :122px;
-    Height: 42px;
-    border-radius :50px  ;
-    border: 1px solid white;
-    align-content: center;
-    justify-content: space-around;
-}
-
-.duration_val{
-    align-self: center;
-    font-size: 1.2rem;
-}
-.search{
-    font-size: 1.2rem;
-    width: 85%
-}
-
-.searchIcon{
-    width: 15%;
-    display: flex;
-   align-items: center;
-}
 
 
 .notification{

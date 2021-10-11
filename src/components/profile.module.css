@@ -1,0 +1,44 @@
+.mainContainer{
+    width: 98%;
+    height: auto;
+    display: grid;
+    grid-template-columns:  1.38fr 0.62fr;
+    grid-template-rows: 0.12fr 1.26fr 0.62fr ;
+    grid-template-areas: 
+      "header header"
+      "info imagebox"
+      "stats .";
+     grid-gap: 2rem 2rem;
+     padding: 2rem;
+     background-color: #121921;
+      
+    
+}
+
+
+
+.headerContainer{
+    grid-area: header;
+    justify-self: center;
+  
+}
+
+.info{
+    grid-area: info;
+    justify-self: center;
+
+}
+ 
+.imagebox{
+    grid-area: imagebox;
+}
+
+.stats{
+    grid-area: stats;
+    justify-self: center;
+
+}
+
+
+
+

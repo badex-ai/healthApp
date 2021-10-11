@@ -1,0 +1,20 @@
+.container{
+    height: 20rem;
+    width: 65.4rem;
+    background-color: #16202A;
+    margin-top: 10px;
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    font-size: 1.8rem;
+}
+.statsBottomCont{
+    display: flex;
+    width:62.4rem ;
+    height:10.6rem ;
+    justify-content: space-between;
+    /* background-color: yellow; */
+    margin-top: 2.3rem;
+    align-items: center;
+    /* justify-content: center; */
+}
+

@@ -1,0 +1,14 @@
+.duration{
+    display :flex;
+    Width :122px;
+    Height: 42px;
+    border-radius :50px  ;
+    border: 1px solid white;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.duration_val{
+    align-self: center;
+    font-size: 1.2rem;
+}

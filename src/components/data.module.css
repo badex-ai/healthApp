@@ -1,7 +1,6 @@
 .container{
 height: 141px;
 width: 141px;
-background: rgba(254, 255, 255, 0.1);;
 border-radius: 24px;
 display: flex;
 flex-direction: column;
@@ -15,7 +14,6 @@ justify-content: center;
     width: 12rem;
     height: auto;
     padding-bottom: 10px;
-    /* background-color: yellow; */
     font-size: 1.4rem;
     text-align: center;
 
@@ -31,7 +29,6 @@ justify-content: center;
     text-align: center;
     padding-top: 1rem;
     border-top: 1px solid #8e9ba484;
-    /* background-color: green; */
 }
 
 .unit{

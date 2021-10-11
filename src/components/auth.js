@@ -17,13 +17,7 @@ function Auth(props) {
         <button className={classes.authbtn} onClick={() => loginWithRedirect()}>
           Log In
         </button>
-        {/* <button className={classes.authbtn} onClick={() =>
-        loginWithRedirect({
-          screen_hint: "signup",
-        })
-      }
-
-> Signup</button> */}
+       
       <div>
         {loading}
       </div>

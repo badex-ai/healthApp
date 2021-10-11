@@ -3,7 +3,7 @@ import Home from './components/home';
 import Auth from './components/auth';
 import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 import ProtectedRoute from './auth/protectedRoute';
-import UserProfile from './components/userProfile';
+import Me from './components/me';
 
 
 
@@ -18,7 +18,7 @@ function App() {
          
          <Route path="/" exact component = {Home}/> 
          {/* <ProtectedRoute path="/home"  component = {Home} exact/>  */}
-         <ProtectedRoute path="/me"  component = {UserProfile} exact/> 
+         <Route path="/me"  component = {Me} exact/> 
          <Route to="/" />
        
      </Switch>

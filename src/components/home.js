@@ -20,7 +20,7 @@ function Home() {
     
 
     const section = isAuthenticated ? <div className ={classes.container}>
-        <Navigation className></Navigation>
+        <Navigation></Navigation>
         <Main/>
    
         </div>: <LandingPage signIn={signInUser}/>
