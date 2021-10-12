@@ -16,6 +16,7 @@ import Summary from '../icons/summary';
 import Heartpink from '../icons/heart-pink';
 import Selector from './selector';
 import Search from './search';
+import Barchart from '../components/barchart1'
 
 
 
@@ -51,7 +52,7 @@ function Main() {
 
             </div>
             <div className={classes.infographicsContainer}>
-            <Infographic icon={<Summary/>} subtext={'You reached your steps target once this week.'} maintext={'weekly summary (12 Sep - 19 sep 2021)'}  selector={selector} ></Infographic>
+            <Infographic graph={<Barchart/>} icon={<Summary/>} subtext={'You reached your steps target once this week.'} maintext={'weekly summary (12 Sep - 19 sep 2021)'}  selector={selector} ></Infographic>
             <Infographic icon={<Power/>} subtext={'19 Sep, 2021'} maintext={'today’s acivity'}  selector={null}></Infographic>
           
 

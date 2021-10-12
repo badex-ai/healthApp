@@ -1,5 +1,7 @@
 import React from 'react';
-import classes from './infographic.module.css'
+import classes from './infographic.module.css';
+
+
 
 function infographic(props) {
     return (
@@ -17,7 +19,7 @@ function infographic(props) {
                 </div>
             </div>
             <div className={classes.bottom}>
-                graph
+               {props.graph}
             </div>
         </div>
     )
