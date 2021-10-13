@@ -33,7 +33,58 @@ function Main() {
                     <option value="year">year</option>
                     </select>
 
-    
+    let dataBar=[
+        {
+            day:'mon',
+            steps: 1,
+            sleep: 6,
+            workout: 2.5
+
+        },
+        {
+            day:'tues',
+            steps: 1,
+            sleep: 6,
+            workout: 3
+        },
+        {
+            day:'wed',
+            steps: 1,
+            sleep: 5,
+            workout: 2.5
+        },
+        {
+            day:'thurs',
+            steps: 1,
+            sleep: 6,
+            workout: 3.2
+        },
+        {
+            day:'fri',
+            steps: 1.5,
+            sleep: 6,
+            workout: 4
+        },
+        {
+            day:'saturday',
+            steps: 0.8,
+            sleep: 5,
+            workout: 3
+        },
+        {
+            day:'sunday',
+            steps: 1.5,
+            sleep: 8,
+            workout: 2
+        }]
+
+        const colors = {
+            workout: "#5D5FEF",
+            steps: "#7879F1",
+            sleep: "#A5A6F6"
+          };
+
+          const keys= ['workout', 'steps',' sleep']
     return (
 
         <div className={classes.mainContainer}>
@@ -52,7 +103,7 @@ function Main() {
 
             </div>
             <div className={classes.infographicsContainer}>
-            <Infographic graph={<Barchart/>} icon={<Summary/>} subtext={'You reached your steps target once this week.'} maintext={'weekly summary (12 Sep - 19 sep 2021)'}  selector={selector} ></Infographic>
+            <Infographic data={dataBar} graph={<Barchart data={dataBar} keys={keys} colors={colors}/>} icon={<Summary/>} subtext={'You reached your steps target once this week.'} maintext={'weekly summary (12 Sep - 19 sep 2021)'}  selector={selector} ></Infographic>
             <Infographic icon={<Power/>} subtext={'19 Sep, 2021'} maintext={'today’s acivity'}  selector={null}></Infographic>
           
 

@@ -1,5 +1,4 @@
 import React from 'react';
-// import classes from './index.css'
 import classes from './activity.module.css'
 
 function Activity(props) {

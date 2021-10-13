@@ -22,11 +22,9 @@
     height: 13.4rem;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     font-size: 2.4rem;
     padding-left: 3rem;
-    /* margin-left: 4.3rem; */
     
 
 }
@@ -39,14 +37,12 @@
 }
 .prof_cont{
     display: flex;
-    /* justify-content: space-between; */
     width: 43.3rem;
     margin-top: 3.2rem;
 
 }
 .subContData{
     display: flex;
-    /* justify-content: ; */
 }
 .subContDatacl{
     background-color: #16202A;

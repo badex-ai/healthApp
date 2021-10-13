@@ -37,8 +37,9 @@ padding: 2.4rem 2.4rem 3.2rem 2.4rem;
 }
 .bottom{
     margin-top: 2rem;
+    
+    width: 100%
 }
 
-.subtext{}
+.subbtm{margin-top: 1.6rem;}
 
-.icon{}

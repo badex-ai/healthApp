@@ -3,7 +3,13 @@ import classes from './infographic.module.css';
 
 
 
+
 function infographic(props) {
+
+    
+
+
+
     return (
         <div className={classes.container}>
             <div className={classes.top}>
@@ -19,7 +25,13 @@ function infographic(props) {
                 </div>
             </div>
             <div className={classes.bottom}>
-               {props.graph}
+                <div>
+                     {props.graph}
+                </div>
+                <div className={classes.subbtm}>
+                    legend
+                </div>
+               
             </div>
         </div>
     )
