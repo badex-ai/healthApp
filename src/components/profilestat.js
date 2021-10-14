@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './profilestat.module.css';
 import  Data from './data'
+import Profilepic from '../assets/profile-pic.png'
 
 function profilestat() {
     return (
@@ -8,7 +9,9 @@ function profilestat() {
             <div className={classes.prof_title}>Your Profile</div>
             <div className={classes.prof_cont}>
 
-                    <div className={classes.prof_img}></div>
+                    <div className={classes.prof_img}>
+                        <img src={Profilepic} width="134px" alt="" />
+                    </div>
                     <div className={classes.prof_subcont}>
                         Shamsudeen Badamasi
                         <button className={classes.prof_button}>Edit</button>

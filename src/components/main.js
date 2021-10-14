@@ -81,10 +81,16 @@ function Main() {
     ];
 
         const colors = {
-            steps: "blue",
+            steps: "#0000FF",
             workout: "#5D5FEF",
             sleep: "#00FF00"
           };
+
+        const colorDonut = {
+            steps: "#6BC3FF" ,
+            actTime: "#A5A6F6",
+            actCal: "#F178B6",
+        }
 
           const keys= ["steps","workout","sleep"]
     return (
@@ -117,8 +123,20 @@ function Main() {
             <Infographic  icon={<Power/>} subtext={'19 Sep, 2021'} maintext={'today’s acivity'}  selector={null}>
                 
                     <div className={classes.donutCont}>
-                        <div className={classes.donut}><DonutChart/></div>
-                        <div></div>
+                        <div  className={classes.donut}><DonutChart color={colorDonut}/></div>
+                        <div className={classes.donutData}>
+                            <div className={classes.donutTop}>
+                                <div> steps <div><span className={classes.big}>243</span>/6000</div></div>
+                                <div>Active time <div><span className={classes.big}>7</span>/90 mins</div></div>
+                                <div> Activity cal <div><span className={classes.big}>40</span> /500 kcal</div></div>
+
+                            </div>
+                            <div className={classes.donutBottom}>
+                                <div > Distance while active <div className={classes.big}>0.19 km</div></div>
+                                <div>Total burnt calories <div className={classes.big}>768 kcal</div></div>
+    
+                            </div>
+                        </div>
                     </div>
                 
                 

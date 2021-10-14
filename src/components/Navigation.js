@@ -7,7 +7,7 @@ import Events from '../icons/events';
 import Achievement from '../icons/achievement';
 import Settings from '../icons/settings';
 import Activities from '../icons/activities';
-
+import Profilepic from '../assets/profile-pic.png'
 
 
 
@@ -45,7 +45,9 @@ function Navigation() {
                     </ul>
                 </div>
                 <div className={classes.profile}>
-                    <div className={classes.profile_pic} > i</div>
+                    <div className={classes.profile_pic} >
+                        <img src={Profilepic} alt="my_proile_picture" width="42px" />
+                    </div>
                     <div>Shamsudeen Badamasi</div>
 
                 </div>

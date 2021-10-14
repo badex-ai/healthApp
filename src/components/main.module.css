@@ -96,10 +96,37 @@ padding: 32px 24px 32px 0px;
     display: flex;
     width: 100%;
     height: 100%;
+    align-items: center;
 }
 .donut{
     width: 16.6rem;
     height: 16.6rem;
 }
 
-.donutData{}
+.donutData{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+}
+.donutTop{
+    width: 28rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid #8e9ba484;
+
+
+}
+.big{
+    font-size: 1.6rem;
+}
+.donutBottom{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    text-align: center;
+}
