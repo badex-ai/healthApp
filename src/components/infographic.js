@@ -25,14 +25,9 @@ function infographic(props) {
                 </div>
             </div>
             <div className={classes.bottom}>
-                <div>
-                     {props.graph}
-                </div>
-                <div className={classes.subbtm}>
-                    legend
-                </div>
-               
+               {props.children}
             </div>
+                
         </div>
     )
 }

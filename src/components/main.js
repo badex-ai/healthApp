@@ -16,7 +16,8 @@ import Summary from '../icons/summary';
 import Heartpink from '../icons/heart-pink';
 import Selector from './selector';
 import Search from './search';
-import Barchart from '../components/barchart1'
+import Barchart from '../components/barchart1';
+import DonutChart from './donutChart';
 
 
 
@@ -37,54 +38,55 @@ function Main() {
         {
             day:'mon',
             steps: 1,
-            sleep: 6,
-            workout: 2.5
+            sleep: 5,
+            workout: 2
 
         },
         {
             day:'tues',
             steps: 1,
-            sleep: 6,
-            workout: 3
+            workout: 2,
+            sleep: 6
         },
         {
             day:'wed',
             steps: 1,
-            sleep: 5,
-            workout: 2.5
+            workout: 2.5,
+            sleep: 5
         },
         {
             day:'thurs',
             steps: 1,
-            sleep: 6,
-            workout: 3.2
+            workout: 3.2,
+            sleep: 6
         },
         {
             day:'fri',
             steps: 1.5,
-            sleep: 6,
-            workout: 4
+            workout: 3,
+            sleep: 6
         },
         {
             day:'saturday',
             steps: 0.8,
+            workout: 3,
             sleep: 5,
-            workout: 3
         },
         {
             day:'sunday',
             steps: 1.5,
-            sleep: 8,
-            workout: 2
-        }]
+            workout: 2,
+            sleep: 8
+        }
+    ];
 
         const colors = {
+            steps: "blue",
             workout: "#5D5FEF",
-            steps: "#7879F1",
-            sleep: "#A5A6F6"
+            sleep: "#00FF00"
           };
 
-          const keys= ['workout', 'steps',' sleep']
+          const keys= ["steps","workout","sleep"]
     return (
 
         <div className={classes.mainContainer}>
@@ -103,8 +105,24 @@ function Main() {
 
             </div>
             <div className={classes.infographicsContainer}>
-            <Infographic data={dataBar} graph={<Barchart data={dataBar} keys={keys} colors={colors}/>} icon={<Summary/>} subtext={'You reached your steps target once this week.'} maintext={'weekly summary (12 Sep - 19 sep 2021)'}  selector={selector} ></Infographic>
-            <Infographic icon={<Power/>} subtext={'19 Sep, 2021'} maintext={'today’s acivity'}  selector={null}></Infographic>
+            <Infographic data={dataBar}  icon={<Summary/>} subtext={'You reached your steps target once this week.'} maintext={'weekly summary (12 Sep - 19 sep 2021)'}  selector={selector} >
+            
+                
+                <Barchart data={dataBar} keys={keys} colors={colors}/>
+            
+                <div className={classes.subbtm}>
+                    legend
+                </div>
+            </Infographic>
+            <Infographic  icon={<Power/>} subtext={'19 Sep, 2021'} maintext={'today’s acivity'}  selector={null}>
+                
+                    <div className={classes.donutCont}>
+                        <div className={classes.donut}><DonutChart/></div>
+                        <div></div>
+                    </div>
+                
+                
+            </Infographic>
           
 
             </div>

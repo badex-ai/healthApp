@@ -26,15 +26,15 @@ function Barchart({data,keys, colors}) {
         const svg = select(svgRef.current)
 
      const {width,height} = select(wrapperRef.current).node().getBoundingClientRect()
+     svg.attr('viewBox', '0 0 ' + width + ' ' + height )
 
 
-     const stackGenerator = stack().keys(keys); 
+     const stackGenerator = stack().keys(keys).order(stackOrderAscending); 
      const layers = stackGenerator(data);
      
 
-     const extent =[0, 12]
+     const extent =[0, 20]
      console.log(stackGenerator(data))
-     console.log(extent)
         
 
         // const { width, height } = dimensions || wrapperRef.current.getBoundingClientRect();
@@ -45,11 +45,12 @@ function Barchart({data,keys, colors}) {
                       .range([0, width])
 
         const yScale = scaleLinear()
-        .domain(extent)
-        .range([height,0])
+                        .domain(extent)
+                        .range([height,0])
 
+        // console.log(layers, colors);
 
-        svg
+    svg
       .selectAll(".layer")
       .data(layers)
       .join("g")
@@ -58,9 +59,9 @@ function Barchart({data,keys, colors}) {
       .selectAll("rect")
       .data(layer => layer)
       .join("rect")
-      .attr("x", sequence => xScale(sequence.data.year))
-      .attr("width", xScale.bandwidth()/5)
-      .attr("y", sequence => yScale(sequence[1]))
+      .attr("x", sequence => xScale(sequence.data.day)+35)
+      .attr("width", Math.floor(xScale.bandwidth()/5))
+      .attr("y", sequence => yScale(sequence[1])- 20)
       .attr("height", sequence => yScale(sequence[0]) - yScale(sequence[1]));
 
 
@@ -68,7 +69,7 @@ function Barchart({data,keys, colors}) {
         const xAxis = axisBottom(xScale);
 
         svg.select(".x-axis")
-           .attr("transform", `translate(8,${height - 20})`)
+           .attr("transform", `translate(8,${height-20})`)
            .call(xAxis);
 
         const yAxis= axisLeft(yScale);
@@ -76,7 +77,7 @@ function Barchart({data,keys, colors}) {
         .attr("transform", `translate(20,-20)`)
         .call(yAxis);
 
-    },[data, keys] )
+    },[colors, data, keys] )
 
 
    
