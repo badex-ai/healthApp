@@ -1,29 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth0 } from "@auth0/auth0-react";
+import LandingPage from './landingPage';
 import classes from './auth.module.css';
+
 import Loading from './loading'
 
 function Auth(props) {
-  const { isLoading } = useAuth0();
-  let loading = isLoading? <Loading/> : null 
-    
+
+    const { user,isLoading,isAuthenticated,loginWithRedirect} = useAuth0();
+
+
+    let [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+      if(!isLoading){
+        setLoaded(true)
+      }
+      
+    }, [isLoading])
   
 
   
-        const { loginWithRedirect } = useAuth0();
-  return (
+  
     
-      <div className={classes.container}>
-        <button className={classes.authbtn} onClick={() => loginWithRedirect()}>
-          Log In
-        </button>
-       
-      <div>
-        {loading}
-      </div>
-      </div>
+
     
+    
+  console.log(isLoading)
+    const section = !loaded ? "loading" :  (isAuthenticated ? "Authenticated" : <LandingPage/>)
+     
+    return (
+        <div className={classes.container}>
+            {section}
+        </div>
+        
+        
+      
+      
+        
     )
+    
+    
 }
 
 export default Auth

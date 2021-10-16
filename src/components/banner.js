@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './banner.module.css';
 import Topheart from '../icons/top-heart';
 import Go from '../icons/go';
@@ -13,10 +14,10 @@ function header() {
                     <div className={classes.subtext}>Reach you goals faster by challenging your friend.
                         The first to complete an activity wins.
                     </div>
-                    <div className={classes.cta}>
-                        <div>Start a Challenge<span className={classes.go}><Go/></span></div>
-                        <div></div>
-                        </div>
+                    <Link to="#"className={classes.cta}>
+                        <div className={classes.navig}>Start a Challenge</div><span className={classes.go}><Go/></span>
+                        
+                        </Link>
                 </div>
             </div>
         </div>

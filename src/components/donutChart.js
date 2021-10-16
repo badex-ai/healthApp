@@ -5,13 +5,11 @@ function DonutChart({color, data}) {
     const donutRef = useRef();
     const svg1Ref = useRef();
 
-    console.log(color)
 
 useEffect(() => {
     const  svg1= d3.select(svg1Ref.current).node();
 
    const width = svg1.getBoundingClientRect().width;
-    console.log(width)
 
     // svg1.append("g")
     //     .attr("transform","translate(" + Math.min(width,height) / 2 + "," + Math.min(width,height) / 2 + ")")

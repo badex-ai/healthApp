@@ -9,8 +9,12 @@
     background-repeat: no-repeat;
 
 }
-.go{margin-left: 1.6rem;
-text-align: center;}
+.go{
+    margin-left: .5rem;
+    margin-top: .5rem;
+    text-align: center
+    }
+
 .textContainer{
     width: 37.3rem;
     height: 16rem;
@@ -41,7 +45,6 @@ text-align: center;}
 
 .cta{
     background-color: #fff;
-    color: #1D9BF0;
     height: 4.2rem;
     width: 18.8rem;
     display: flex;
@@ -49,9 +52,15 @@ text-align: center;}
     border-radius: 32px;
     margin-top: 4rem;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    text-decoration: none;
 
+}
+.navig{
+    color: #1D9BF0;
 
-
+}
+.navig:hover{
+    color: #1D9BF0;
 
 }

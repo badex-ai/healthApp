@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classes from './main.module.css'
 import Activity from './activity';
 import Banner from './banner'
@@ -21,7 +21,14 @@ import DonutChart from './donutChart';
 
 
 
+
 function Main() {
+
+        
+    // const user = useContext(UserContext)
+    
+    
+
     let color= "#feffff1a"
     const title =  <div className={classes.header_title}>Dashboard Overview</div>;
        const date=  <div className={classes.date} >

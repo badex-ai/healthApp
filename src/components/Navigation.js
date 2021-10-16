@@ -7,12 +7,17 @@ import Events from '../icons/events';
 import Achievement from '../icons/achievement';
 import Settings from '../icons/settings';
 import Activities from '../icons/activities';
-import Profilepic from '../assets/profile-pic.png'
+import {NavLink,Link} from 'react-router-dom';
 
 
 
 
-function Navigation() {
+
+
+function Navigation(props) {
+    const { user  } = useAuth0();
+    console.log(user)
+    
     const { logout } = useAuth0();
     return (
         <nav className={classes.container}>
@@ -22,33 +27,43 @@ function Navigation() {
                 </div>
                 <div className={classes.navs}>
                     <ul>
-                        <li className={classes.nav}>
-                            <div>{<Dashboard/>}</div>
-                            <div className={classes.nav_txt} >Dashboard</div>
+                        <li>
+                            <NavLink exact activeClassName={classes.navActive} to="/dashboard" className={classes.navtag}>
+                                <div>{<Dashboard/>}</div>
+                                <div className={classes.nav_txt} >Dashboard</div>
+                            </NavLink>
                         </li>
-                        <li className={classes.nav}>
-                            <div><Activities/></div>
-                            <div className={classes.nav_txt}>Activities</div>
+                        <li>
+                            <NavLink activeClassName="navActive" to="#" className={classes.navtag}>
+                                <div><Activities/></div>
+                                <div className={classes.nav_txt}>Activities</div>
+                            </NavLink>
                         </li>
-                        <li className={classes.nav}>
-                            <div>{<Achievement/>}</div>
-                            <div className={classes.nav_txt}>Achievement</div>
+                        <li>
+                            <NavLink activeClassName="navActive" to="#" className={classes.navtag}>
+                                <div>{<Achievement/>}</div>
+                                <div className={classes.nav_txt}>Achievement</div>
+                            </NavLink>
                         </li>
-                        <li className={classes.nav}>
-                            <div>{<Events/>}</div>
-                            <div className={classes.nav_txt}>Events</div>
+                        <li>
+                            <NavLink activeClassName="navActive" to="#" className={classes.navtag}>
+                                <div>{<Events/>}</div>
+                                <div className={classes.nav_txt}>Events</div>
+                            </NavLink>
                         </li>
-                        <li className={classes.nav}>
-                            <div><Settings/></div>
-                            <div className={classes.nav_txt}>Settings</div>
+                        <li>
+                            <NavLink activeClassName="navActive" to="#" className={classes.navtag}>
+                                <div><Settings/></div>
+                                <div className={classes.nav_txt}>Settings</div>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
                 <div className={classes.profile}>
                     <div className={classes.profile_pic} >
-                        <img src={Profilepic} alt="my_proile_picture" width="42px" />
+                        <img className={classes.profile_pic} src={user.picture} alt="my_proile_picture" width="42px" />
                     </div>
-                    <div>Shamsudeen Badamasi</div>
+                    <Link className={classes.linktag} to="/me">{user.name}</Link>
 
                 </div>
                 <button className={classes.logout} onClick={() =>logout({ returnTo: window.location.origin,})}>

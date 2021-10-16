@@ -1,26 +1,21 @@
 import React, { useRef, useEffect } from 'react';
-// import {useRef} from 
 import {
     select,
     scaleBand,
     axisBottom,
     stack,
-    max,
     scaleLinear,
     axisLeft,
     stackOrderAscending
   } from "d3";
 
-//   import useResizeObserver from "../assets/useResizeObserver";
   
 
 function Barchart({data,keys, colors}) {
 
-   console.log(data)
    const svgRef = useRef();
     const wrapperRef = useRef();
    
-    //    const dimensions = useResizeObserver({wrapperRef,box: "border-box"});
 
     useEffect(() => {
         const svg = select(svgRef.current)
@@ -34,7 +29,6 @@ function Barchart({data,keys, colors}) {
      
 
      const extent =[0, 20]
-     console.log(stackGenerator(data))
         
 
         // const { width, height } = dimensions || wrapperRef.current.getBoundingClientRect();
