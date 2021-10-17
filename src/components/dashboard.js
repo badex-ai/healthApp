@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import classes from './main.module.css'
 import Activity from './activity';
 import Banner from './banner'
@@ -16,16 +16,15 @@ import Summary from '../icons/summary';
 import Heartpink from '../icons/heart-pink';
 import Selector from './selector';
 import Search from './search';
-import Barchart from '../components/barchart1';
+import Barchart from './barchart1';
 import DonutChart from './donutChart';
 
 
 
 
-function Main() {
+function Dashboard() {
 
         
-    // const user = useContext(UserContext)
     
     
 
@@ -170,4 +169,4 @@ function Main() {
     )
 }
 
-export default Main
+export default Dashboard

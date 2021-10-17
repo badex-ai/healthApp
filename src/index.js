@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './fonts/CircularStd-Medium.otf'
+import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    
+    <Auth0ProviderWithHistory>
       <App />
+      </Auth0ProviderWithHistory>
     
   </React.StrictMode>,
   document.getElementById('root')

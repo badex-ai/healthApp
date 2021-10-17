@@ -17,17 +17,26 @@ function Auth(props) {
         setLoaded(true)
       }
       
+      
     }, [isLoading])
   
 
-  
+
+    const  signInUser=()=>{
+       loginWithRedirect()
+
+    }
   
     
+    const redirect =()=>{
+      console.log("redirected")
 
+      window.location.assign("./dashboard");
+    }
     
     
   console.log(isLoading)
-    const section = !loaded ? "loading" :  (isAuthenticated ? "Authenticated" : <LandingPage/>)
+    const section = !loaded ? "loading" :  (!isAuthenticated ? <LandingPage signIn={signInUser}  /> : null)
      
     return (
         <div className={classes.container}>

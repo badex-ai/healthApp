@@ -48,7 +48,7 @@ function Barchart({data,keys, colors}) {
       .selectAll(".layer")
       .data(layers)
       .join("g")
-      .attr("class", "layer")
+      .attr("className", "layer")
       .attr("fill", layer => colors[layer.key])
       .selectAll("rect")
       .data(layer => layer)

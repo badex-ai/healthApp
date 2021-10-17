@@ -1,14 +1,16 @@
-import React from 'react';
-import classes from './profilestat.module.css';
-import  Data from './data'
-import Profilepic from '../assets/profile-pic.png';
-// import { useAuth0 } from "@auth0/auth0-react";
+import React, {useContext} from 'react';
+import classes from './mystat.module.css';
+import  Data from './data';
+import UserContext1 from '../context/user'
+// import Profilepic from '../assets/profile-pic.png';
 import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 
 
-function Profilestat() {
-     const { user  } = useAuth0();
+function Mystat() {
+    // const {user}=useAuth0()
+     const user = useContext(UserContext1)
      console.log(user);
 
     return (
@@ -42,4 +44,4 @@ function Profilestat() {
     )
 }
 
-export default Profilestat
+export default Mystat

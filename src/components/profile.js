@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './profile.module.css'
 import Header from './header';
-import Profilestat from './profilestat';
+import Mystat from './mystat';
 import Imagebox from './imagebox';
 import Stats from './stats';
 
@@ -19,7 +19,7 @@ function Profile() {
             <Header title={'Profile'} search={null} selector={null}></Header>
             </div>
             <div className={classes.info}>
-            <Profilestat ></Profilestat>
+            <Mystat ></Mystat>
             </div>
             <div className={classes.imagebox}>
             <Imagebox ></Imagebox>

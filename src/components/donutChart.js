@@ -90,14 +90,14 @@ useEffect(() => {
     return (
         <React.Fragment>
             <svg ref={svg1Ref} width="100%" height="100%">
-                <circle class="outer1"/>
-                <path class="arc1"/>
+                <circle className="outer1"/>
+                <path className="arc1"/>
                 
-                <circle class="outer2"/>
-                <path class="arc2"/>
+                <circle className="outer2"/>
+                <path className="arc2"/>
              
-                <circle class="outer3"/>
-                <path class="arc3"/>
+                <circle className="outer3"/>
+                <path className="arc3"/>
                
 
             </svg>

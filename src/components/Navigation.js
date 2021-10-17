@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from '../assets/logo-sm.svg';
 import classes from './navigation.module.css';
 import { useAuth0 } from "@auth0/auth0-react";
@@ -8,18 +7,21 @@ import Achievement from '../icons/achievement';
 import Settings from '../icons/settings';
 import Activities from '../icons/activities';
 import {NavLink,Link} from 'react-router-dom';
-
+import React,{ useContext } from 'react';
+import UserContext from '../context/user';
+// useContext
 
 
 
 
 
 function Navigation(props) {
-    const { user  } = useAuth0();
-    console.log(user)
+    const { logout,user } = useAuth0();
+
     
-    const { logout } = useAuth0();
+    
     return (
+        
         <nav className={classes.container}>
             <div className={classes.navbox}>
                 <div className={classes.logo}>
@@ -28,7 +30,7 @@ function Navigation(props) {
                 <div className={classes.navs}>
                     <ul>
                         <li>
-                            <NavLink exact activeClassName={classes.navActive} to="/dashboard" className={classes.navtag}>
+                            <NavLink exact activeClassName={classes.navActive} to="/" className={classes.navtag}>
                                 <div>{<Dashboard/>}</div>
                                 <div className={classes.nav_txt} >Dashboard</div>
                             </NavLink>
@@ -61,7 +63,7 @@ function Navigation(props) {
                 </div>
                 <div className={classes.profile}>
                     <div className={classes.profile_pic} >
-                        <img className={classes.profile_pic} src={user.picture} alt="my_proile_picture" width="42px" />
+                        <img className={classes.profile_pic} src={user.picture} alt="my_profile_picture" width="42px" />
                     </div>
                     <Link className={classes.linktag} to="/me">{user.name}</Link>
 
@@ -73,6 +75,7 @@ function Navigation(props) {
             </div>
             
         </nav>
+        
     )
 }
 
