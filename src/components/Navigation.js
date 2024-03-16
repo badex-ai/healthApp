@@ -26,7 +26,7 @@ function Navigation(props) {
 							<NavLink
 								exact
 								activeClassName={classes.navActive}
-								to="/"
+								to="/home"
 								className={classes.navtag}
 							>
 								<div>{<Dashboard />}</div>
@@ -36,7 +36,7 @@ function Navigation(props) {
 						<li>
 							<NavLink
 								activeClassName="navActive"
-								to="#"
+								to="/activities"
 								className={classes.navtag}
 							>
 								<div>
@@ -48,7 +48,7 @@ function Navigation(props) {
 						<li>
 							<NavLink
 								activeClassName="navActive"
-								to="#"
+								to="/achievements"
 								className={classes.navtag}
 							>
 								<div>{<Achievement />}</div>
@@ -58,7 +58,7 @@ function Navigation(props) {
 						<li>
 							<NavLink
 								activeClassName="navActive"
-								to="#"
+								to="/events"
 								className={classes.navtag}
 							>
 								<div>{<Events />}</div>
@@ -68,7 +68,7 @@ function Navigation(props) {
 						<li>
 							<NavLink
 								activeClassName="navActive"
-								to="#"
+								to="/settings"
 								className={classes.navtag}
 							>
 								<div>

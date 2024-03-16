@@ -13,6 +13,10 @@ import {
 	Link,
 } from "react-router-dom";
 import Me from "./Pages/me/me";
+import Events from "./Pages/Events/Events";
+import Achievements from "./Pages/Achievements/Achievements";
+import Settings from "./Pages/Settings/Settings";
+import Activities from "./Pages/Activities/Activities";
 
 // import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
@@ -20,15 +24,58 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <App />,
+		// errorElement: <ErrorPage />,
+		children: [
+			{
+				path: "/home",
+				element: <Home />,
+			},
+			{
+				path: "/activities",
+				element: <Activities />,
+			},
+			{
+				path: "/achievements",
+				element: <Achievements />,
+			},
+			{
+				path: "/settings",
+				element: <Settings />,
+			},
+			{
+				path: "/events",
+				element: <Events />,
+			},
+			{
+				path: "me",
+				element: <Me />,
+			},
+		],
 	},
-	{
-		path: "/home",
-		element: <Home />,
-	},
-	{
-		path: "me",
-		element: <Me />,
-	},
+	// {
+	// 	path: "/Home",
+	// 	element: <Home />,
+	// },
+	// {
+	// 	path: "/activities",
+	// 	element: <Home />,
+	// },
+	// {
+	// 	path: "/events",
+	// 	element: <Events />,
+	// },
+	// {
+	// 	path: "/acheivements",
+	// 	element: <Achievements />,
+	// },
+	// {
+	// 	path: "/settings",
+	// 	element: <Settings />,
+	// },
+	// {
+	// 	path: "me",
+	// 	element: <Me />,
+	// },
 ]);
 
 // ReactDOM.render(

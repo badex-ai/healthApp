@@ -6,6 +6,7 @@ import LandingPage from "../../components/landingPage";
 import { useAuth0 } from "@auth0/auth0-react";
 import Loading from "../../components/loading";
 import UserContext from "../../context/user";
+import { Outlet } from "react-router-dom";
 
 function Home() {
 	// const { isAuthenticated, loginWithRedirect, isLoading, user } = useAuth0();
@@ -28,10 +29,12 @@ function Home() {
 	const section = (
 		// !loaded ? <div ><Loading/></div>:  (isAuthenticated ?
 
-		<div className={classes.container}>
-			<Navigation></Navigation>
-			<Dashboard />
-		</div>
+		// <div className={classes.container}>
+		// 	<Navigation></Navigation>
+		// 	<div><Outlet/></div>
+		// 	{/* <Dashboard /> */}
+		// </div>
+		<Dashboard />
 	);
 	//  : <LandingPage signIn={signInUser}/>)
 

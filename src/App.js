@@ -9,6 +9,9 @@ import { createContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState, useEffect } from "react";
 // import UserContext from './context/user';
+import classes from "./Pages/Home/home.module.css";
+import Navigation from "./components/Navigation";
+import { Outlet } from "react-router-dom";
 
 function App() {
 	return (
@@ -24,7 +27,12 @@ function App() {
 		//  {/* </UserContext.Provider> */}
 
 		//  </Router>
-		<div>here</div>
+		<div className={classes.container}>
+			<Navigation></Navigation>
+			<div>
+				<Outlet />
+			</div>
+		</div>
 	);
 }
 
