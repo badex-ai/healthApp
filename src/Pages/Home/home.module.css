@@ -1,12 +1,13 @@
-.container{
+/* .container{
     background-color:var(--background-color) ;
-    display: grid;
+    display: flex;
     grid-template-columns: 21% 75%;
     position: relative;
+    width: 82%;
     
     
     
   
-  }
+  } */
 
   

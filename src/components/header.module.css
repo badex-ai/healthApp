@@ -5,6 +5,7 @@
     width: 106.2rem;
     display: flex;
     justify-content: space-between;
+    position: relative;;
     
 }
 
@@ -18,11 +19,15 @@
 }
 
 .header_right{
-    width: 56.2rem;
+    width: auto;
+    /* min-width: 200px; */
     height: inherit;
-    display:flex;
+    display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, max-content)); /* Create grid with auto-sized columns */
+  grid-gap: 10px
+    /* display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 .header_right_sm{
     width: auto;

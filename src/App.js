@@ -9,7 +9,8 @@ import { createContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState, useEffect } from "react";
 // import UserContext from './context/user';
-import classes from "./Pages/Home/home.module.css";
+// import classes from "./Pages/Home/home.module.css";
+import classes from "./App.module.css";
 import Navigation from "./components/Navigation";
 import { Outlet } from "react-router-dom";
 
@@ -28,8 +29,11 @@ function App() {
 
 		//  </Router>
 		<div className={classes.container}>
-			<Navigation></Navigation>
-			<div>
+			<div className={classes.nav}>
+				<Navigation></Navigation>
+			</div>
+
+			<div className={classes.main}>
 				<Outlet />
 			</div>
 		</div>

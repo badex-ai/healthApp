@@ -26,24 +26,24 @@ function Home() {
 	// 	loginWithRedirect();
 	// };
 
-	const section = (
-		// !loaded ? <div ><Loading/></div>:  (isAuthenticated ?
+	// const section = (
+	// !loaded ? <div ><Loading/></div>:  (isAuthenticated ?
 
-		// <div className={classes.container}>
-		// 	<Navigation></Navigation>
-		// 	<div><Outlet/></div>
-		// 	{/* <Dashboard /> */}
-		// </div>
-		<Dashboard />
-	);
+	// <div className={classes.container}>
+	// 	<Navigation></Navigation>
+	// 	<div><Outlet/></div>
+	// 	{/* <Dashboard /> */}
+	// </div>
+
+	// );
 	//  : <LandingPage signIn={signInUser}/>)
 
 	return (
-		<div>
+		<>
 			{/* <UserContext.Provider value={user}> */}
-			{section}
+			<Dashboard />
 			{/* </UserContext.Provider> */}
-		</div>
+		</>
 	);
 }
 
