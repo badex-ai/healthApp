@@ -4,6 +4,9 @@ import Selector from "../../components/selector";
 import Sport from "../../components/sport";
 
 const Activities = () => {
+
+const sport = []
+
 	return (
 		<div>
 			<Header
