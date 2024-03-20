@@ -9,6 +9,7 @@ import rugby from "../../assets/rugby.jpg";
 import basketball from "../../assets/basketball.jpg";
 import golf from "../../assets/golf.jpg";
 import karate from "../../assets/karate.jpg";
+import Search from "../../components/search";
 
 const Activities = () => {
 	const sports = [
@@ -29,6 +30,7 @@ const Activities = () => {
 		<div>
 			<Header
 				components={[
+					<Search />,
 					<Selector name="LGA" array={["day", "week", "month", "year"]} />,
 				]}
 				title={"Activities"}
