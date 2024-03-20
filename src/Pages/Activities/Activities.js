@@ -2,10 +2,28 @@ import React from "react";
 import Header from "../../components/header";
 import Selector from "../../components/selector";
 import Sport from "../../components/sport";
+import tennis from "../../assets/tennis.jpg";
+import tableTennis from "../../assets/tableTennis.jpg";
+import football from "../../assets/football.jpg";
+import rugby from "../../assets/rugby.jpg";
+import basketball from "../../assets/basketball.jpg";
+import golf from "../../assets/golf.jpg";
+import karate from "../../assets/karate.jpg";
 
 const Activities = () => {
+	const sports = [
+		{ link: tennis, name: "tennis" },
+		{ link: tableTennis, name: "tableTennis" },
+		{ link: football, name: "football" },
+		{ link: rugby, name: "rugby" },
+		{ link: golf, name: "golf" },
+		{ link: basketball, name: "basketball" },
+		{ link: karate, name: "karate" },
+	];
 
-const sport = []
+	const displayedSport = sports.map((sport) => (
+		<Sport key={sport.name} name={sport.name} img={sport.link}></Sport>
+	));
 
 	return (
 		<div>
@@ -17,13 +35,7 @@ const sport = []
 			></Header>
 			<div>
 				<div className="grid grid-cols-3 place-items-center gap-16">
-					<Sport name={"Football"} img={""}></Sport>
-					<Sport name={"Volleyball"} img={""}></Sport>
-					<Sport name={"Hockey"} img={""}></Sport>
-					<Sport name={"Cricket"} img={""}></Sport>
-					<Sport></Sport>
-					<Sport></Sport>
-					<Sport></Sport>
+					{displayedSport}
 				</div>
 			</div>
 		</div>

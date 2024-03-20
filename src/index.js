@@ -17,6 +17,7 @@ import Events from "./Pages/Events/Events";
 import Achievements from "./Pages/Achievements/Achievements";
 import Settings from "./Pages/Settings/Settings";
 import Activities from "./Pages/Activities/Activities";
+import Sport from "./Pages/Activities/Sport";
 
 // import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
@@ -33,6 +34,12 @@ const router = createBrowserRouter([
 			{
 				path: "/activities",
 				element: <Activities />,
+				// children: [
+				// 	{
+				// 		path: "./:name",
+				// 		element: <Sport />,
+				// 	},
+				// ],
 			},
 			{
 				path: "/achievements",
