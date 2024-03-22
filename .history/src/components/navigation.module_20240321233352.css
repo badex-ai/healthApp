@@ -67,7 +67,8 @@
     text-decoration: none;
     color:  #ffffff99
 } */
-.navtag:active
+.navtag:active,
+:hover
 {
     text-decoration: none;
     color:#ffffff;  

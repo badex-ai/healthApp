@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../../components/header";
 import SportCard from "../../components/sportCard";
 import { Link, Outlet, useParams, Navigate } from "react-router-dom";
 import Search from "../../components/search";
 import Selector from "../../components/selector";
-import MapModal from "../../components/mapModal";
 
 const SportPage = () => {
-
-	const [showModal, setShowModal] = useState(false)
-
 	const sampleSport = [
 		{ location: "maryland", start: "8:00am" },
 		{ location: "maryland", start: "8:00am" },
@@ -22,18 +18,9 @@ const SportPage = () => {
 
 	const { sportname } = useParams();
 
-
-	const OpenMap =()=>{
-		setShowModal(true)
-	}
-
-	const mapModal = showModal ? <MapModal/> : ''
-
 	const sportEvents = sampleSport.map((sp) => (
-		<SportCard showMapDirection={OpenMap} location={sp.location} start={sp.start} />
+		<SportCard location={sp.location} start={sp.start} />
 	));
-
-	
 	return (
 		<div>
 			<Header
@@ -55,8 +42,6 @@ const SportPage = () => {
 			<div className="grid grid-cols-3 place-items-center gap-16 mt-[5rem] ">
 				{sportEvents}
 			</div>
-			<div ></div>
-			{mapModal}
 		</div>
 	);
 };

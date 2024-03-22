@@ -55,7 +55,6 @@ const SportPage = () => {
 			<div className="grid grid-cols-3 place-items-center gap-16 mt-[5rem] ">
 				{sportEvents}
 			</div>
-			<div ></div>
 			{mapModal}
 		</div>
 	);

@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { createPortal } from 'react-dom';
 import MapModal from "./mapModal";
 
 const SportCard = ({ location, start, showMapDirection }) => {
-	// const [openModal, setOpenModal] = useState(false);
+	const [openModal, setOpenModal] = useState(false);
+	const [showModal, setShowModal] = useState(false)
 
-	
-	
+	const mapPortal = document.getElementById("map")
+	console.log(mapPortal,`this is the map portal`)
 
-
+	const modal = openModal ? <MapModal /> : ''
 
 	function openDirectionModal() {
-		
-		showMapDirection()
-	
+		console.log(`clicked`)
+		// setOpenModal(true);
+		setShowModal(true)
+		createPortal(
+			<div>my lane no be your lane</div>,
+			document.body
+		  )
+		// createPortal(
+		// 	<MapModal />,
+		// 	mapPortal
+		//   )
 		
 	}
 	
@@ -27,7 +36,10 @@ const SportCard = ({ location, start, showMapDirection }) => {
 					<button onClick={openDirectionModal}>Direction </button>
 				</div>
 			</div>
-			
+			{/* {showModal && createPortal(
+       <MapModal/>,
+        document.body
+      )} */}
 			
 		</div>
 	);

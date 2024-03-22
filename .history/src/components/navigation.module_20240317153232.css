@@ -32,11 +32,11 @@
     
 }
 .linktag:active,
-/* :hover
+:hover
 {
     text-decoration: none;
     color:#ffffff
-} */
+}
 .profile_pic{
     width: 4.2rem;
     height: 4.2rem;
@@ -67,7 +67,8 @@
     text-decoration: none;
     color:  #ffffff99
 } */
-.navtag:active
+.navtag:active,
+:hover
 {
     text-decoration: none;
     color:#ffffff;  

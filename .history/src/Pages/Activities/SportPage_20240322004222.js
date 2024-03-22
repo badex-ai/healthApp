@@ -27,8 +27,6 @@ const SportPage = () => {
 		setShowModal(true)
 	}
 
-	const mapModal = showModal ? <MapModal/> : ''
-
 	const sportEvents = sampleSport.map((sp) => (
 		<SportCard showMapDirection={OpenMap} location={sp.location} start={sp.start} />
 	));
@@ -55,8 +53,7 @@ const SportPage = () => {
 			<div className="grid grid-cols-3 place-items-center gap-16 mt-[5rem] ">
 				{sportEvents}
 			</div>
-			<div ></div>
-			{mapModal}
+			<MapModal/>
 		</div>
 	);
 };

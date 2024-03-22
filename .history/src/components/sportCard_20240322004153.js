@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createPortal } from 'react-dom';
 import MapModal from "./mapModal";
 
@@ -27,7 +27,10 @@ const SportCard = ({ location, start, showMapDirection }) => {
 					<button onClick={openDirectionModal}>Direction </button>
 				</div>
 			</div>
-			
+			{/* {showModal && createPortal(
+       <MapModal/>,
+        document.body
+      )} */}
 			
 		</div>
 	);
