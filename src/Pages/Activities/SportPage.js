@@ -23,19 +23,25 @@ const SportPage = () => {
 	const { sportname } = useParams();
 
 
-	const OpenMap =()=>{
+	const openMap =()=>{
 		setShowModal(true)
 	}
 
-	const mapModal = showModal ? <MapModal/> : ''
+	const closeMap=()=>{
+		setShowModal(false)
+	}
+
+	const mapModal = showModal ? <div className="fixed bg-red-500 opacity-90 top-0 z-1 w-[100%] map-height " onClick={closeMap}>
+		<MapModal closeModal={closeMap}/> 
+		</div>: ''
 
 	const sportEvents = sampleSport.map((sp) => (
-		<SportCard showMapDirection={OpenMap} location={sp.location} start={sp.start} />
+		<SportCard showMapDirection={openMap} location={sp.location} start={sp.start} />
 	));
 
 	
 	return (
-		<div>
+		<div className="relative min-h-screen bg-brown-500">
 			<Header
 				components={[
 					<Search />,
@@ -55,8 +61,12 @@ const SportPage = () => {
 			<div className="grid grid-cols-3 place-items-center gap-16 mt-[5rem] ">
 				{sportEvents}
 			</div>
-			<div ></div>
+			
 			{mapModal}
+			
+			
+			
+			
 		</div>
 	);
 };

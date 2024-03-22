@@ -11,11 +11,12 @@
 }
 
 .nav{
-  width: 18%;
+  width: 15%;
   height: 100%;
   display: flex;
-  background-color: var(--section-color);
+  /* background-color: var(--section-color); */
   justify-content: center;
+  /* background-color: yellow !important; */
   
 
 }

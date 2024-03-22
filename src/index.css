@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.map-height {
+  height: calc(100vh - 60px);
+}
+
+.map-width{
+
+}
+
 
 :root {
   --background-color: #16202A;
