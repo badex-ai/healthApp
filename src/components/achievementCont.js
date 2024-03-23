@@ -1,8 +1,13 @@
 import React from 'react'
 
-const AchievementCont = () => {
+const AchievementCont = ({year,}) => {
   return (
-    <div>achievementCont</div>
+    <div className='h-28 w-[80%] border '>
+        <div>{year}</div>
+        <div>Roadmap</div>
+        <div></div>
+        
+    </div>
   )
 }
 

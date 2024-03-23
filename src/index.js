@@ -14,7 +14,7 @@ import {
 } from "react-router-dom";
 import Me from "./Pages/me/me";
 import Events from "./Pages/Events/Events";
-import Achievements from "./Pages/Achievements/Achievements";
+import AchievementsPage from "./Pages/Achievements/AchievementsPage";
 import Settings from "./Pages/Settings/Settings";
 import Activities from "./Pages/Activities/Activities";
 import SportPage from "./Pages/Activities/SportPage";
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/achievements",
-				element: <Achievements />,
+				element: <AchievementsPage />,
 			},
 			{
 				path: "/settings",

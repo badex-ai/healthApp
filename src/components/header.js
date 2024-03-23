@@ -5,9 +5,12 @@ import Selector from "./selector";
 import Search from "./search";
 
 function Header({ components, ...props }) {
-	const componentsList = components.map((component) => {
-		return <div>{component}</div>;
-	});
+
+	const componentsList = components ? 
+		components.map((component) => {
+			return <div>{component}</div>;
+		})
+	 : ''
 	return (
 		<div className={classes.container}>
 			<div className={classes.header_left}>
