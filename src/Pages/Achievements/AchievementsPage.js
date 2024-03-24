@@ -35,9 +35,11 @@ const Achievements = () => {
 	
 ]
 
-const achievementsList = achievements.map((achievement)=>{
+const achievementsList = achievements.map((achievement)=>(
 	<AchievementCont achievement= {achievement} />
-})
+
+)
+)
 	return <div>
 		<Header
 				components={[
@@ -47,7 +49,10 @@ const achievementsList = achievements.map((achievement)=>{
 				// date={date}
 				title={"Achievements"}
 			/>
+			<div className="flex flex-col">
 			{achievementsList}
+
+			</div>
 	</div>;
 };
 

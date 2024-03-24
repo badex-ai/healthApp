@@ -13,11 +13,12 @@ import {
 	Link,
 } from "react-router-dom";
 import Me from "./Pages/me/me";
-import Events from "./Pages/Events/Events";
+import EventsPage from "./Pages/Events/EventsPage";
 import AchievementsPage from "./Pages/Achievements/AchievementsPage";
 import Settings from "./Pages/Settings/Settings";
 import Activities from "./Pages/Activities/Activities";
 import SportPage from "./Pages/Activities/SportPage";
+import EventPage from "./Pages/Events/EventPage";
 
 // import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
@@ -49,7 +50,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/events",
-				element: <Events />,
+				element: <EventsPage />,
+			},
+			{
+				path: "/events/:name",
+				element: <EventPage />,
 			},
 			{
 				path: "me",

@@ -62,7 +62,7 @@ function Navigation(props) {
 							}
 						>
 							<div>{<Achievement />}</div>
-							<div className={classes.nav_txt}>Achievement</div>
+							<div className={classes.nav_txt}>Achievements</div>
 						</NavLink>
 					</li>
 					<li>
