@@ -1,9 +1,13 @@
 import * as Portal from '@radix-ui/react-portal';
 import React from 'react'
 
-const FullPortal = ({content}) => {
+const FullPortal = ({content,closePortal,children}) => {
   return (
-    <Portal.Root className='aboslute h-screen w-[100vw] bg-red-500 text-white text-2xl'>Content</Portal.Root>
+    <Portal.Root  className='absolute h-screen w-[100vw] top-0 bg-red-500 text-white text-2xl'>
+        <div onClick={closePortal} className=''>
+        {children}
+        </div>
+        </Portal.Root>
   )
 }
 
