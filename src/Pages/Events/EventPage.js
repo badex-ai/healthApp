@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Header from "../../components/header";
 import ButtonSm from '../../components/buttons/buttonSm';
 import FullPortal from '../../components/portal';
+import vid from '../../assets/video/footvid.mp4'
 
 
 const EventPage = (props) => {
@@ -15,10 +16,20 @@ const EventPage = (props) => {
     setOpenPortal(true)
   }
 
-  const video = openPortal ? <FullPortal/> : ''
+  function addVideo() {
+    console.log(`add vid`)
+  }
+
+  const vidPlayback = <video width="640" height="360" controls>
+  <source src={vid} type="video/mp4"/>
+  Your browser does not support the video tag.
+</video>
+
+console.log(openPortal ,`this opens the portal`)
+  const video = openPortal ? <FullPortal>{vidPlayback}</FullPortal> : ''
 
   const videos = hightlights.length ?  hightlights.map((hightlight,index)=>(
-    <div className='w-[60%] h-[30rem] border'>
+    <div onClick={playVideo} className='w-[60%] h-[30rem] border cursor-pointer'>
         <img src="" alt={`${hightlight[index]}`} />
     </div>
   )) : <div>no videos yet</div>
@@ -32,7 +43,7 @@ const EventPage = (props) => {
         </div>
         <div>
         <p>Watch hightlights</p>
-        <ButtonSm click={playVideo} text={'+'}/>
+        <ButtonSm click={addVideo} text={'+'}/>
         </div>
         
         <div className='grid grid-cols-3 '>
