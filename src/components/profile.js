@@ -15,9 +15,9 @@ function Profile() {
     return (
 
         <div className={classes.mainContainer}>
-            <div className={classes.headerContainer}>
+            {/* <div className={classes.headerContainer}>
             <Header title={'Profile'} search={null} selector={null}></Header>
-            </div>
+            </div> */}
             <div className={classes.info}>
             <Mystat ></Mystat>
             </div>

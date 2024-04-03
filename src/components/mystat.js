@@ -2,16 +2,17 @@ import React, {useContext} from 'react';
 import classes from './mystat.module.css';
 import  Data from './data';
 import UserContext1 from '../context/user'
-// import Profilepic from '../assets/profile-pic.png';
+import Profilepic from '../assets/profile-pic.png';
 import { useAuth0 } from "@auth0/auth0-react";
+import ButtonMd from './buttons/buttonMd';
 // import { useAuth0 } from "@auth0/auth0-react";
 
 
 
 function Mystat() {
     // const {user}=useAuth0()
-     const user = useContext(UserContext1)
-     console.log(user);
+    //  const user = useContext(UserContext1)
+    //  console.log(user);
 
     return (
         <div className={classes.container}>
@@ -19,11 +20,13 @@ function Mystat() {
             <div className={classes.prof_cont}>
 
                     <div >
-                        <img className={classes.prof_img} src={user.picture} width="134px" alt="" />
+                        <img className={classes.prof_img} src={''} width="134px" alt="" />
                     </div>
                     <div className={classes.prof_subcont}>
-                        {user.name}
-                        <button className={classes.prof_button}>Edit</button>
+                        {/* {user.name}  */}
+                        Alliu
+                        <ButtonMd text='Edit'/>
+                        {/* <button className={classes.prof_button}>Edit</button> */}
                     </div>
                 
             </div>

@@ -1,8 +1,13 @@
 import React from 'react';
 import classes from './imagebox.module.css';
 import Body from '../assets/body';
+import ButtonMd from './buttons/buttonMd';
 
 function imagebox() {
+
+    function pictureUpload(){
+        console.log('upload')
+    }
     return (
         <div className={classes.container}>
             <div className={classes.top}>
@@ -15,7 +20,8 @@ function imagebox() {
                         <button className={classes.btncircle}/>
                     </div>
                     <div className={classes.txt}>Upload your full frontal and side view pictures</div>
-                    <button className={classes.btn}>Upload</button>
+                    <ButtonMd action ={pictureUpload}text='Upload' />
+                    {/* <button className={classes.btn}>Upload</button> */}
                 </div>
             </div>
         </div>

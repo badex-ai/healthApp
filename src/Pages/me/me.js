@@ -6,16 +6,21 @@ import UserContext1 from "../../context/user";
 import { useContext } from "react";
 
 import React from "react";
+import Header from "../../components/header";
 
 function Me() {
 	// const { user } = useAuth0();
 	// console.log(user);
 
 	return (
-		<div className={classes.container}>
-			{/* <Navigation/>
-            <Profile/> */}
-			here
+		<div >
+			<Header 
+				// date={date}
+				title={"Event"}/>
+        
+			
+			<Profile/> 
+		
 		</div>
 	);
 }

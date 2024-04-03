@@ -4,11 +4,13 @@ import ButtonSm from '../../components/buttons/buttonSm';
 import FullPortal from '../../components/portal';
 import vid from '../../assets/video/footvid.mp4'
 import TooltipComponent from '../../components/Tooltip';
+import AddIcon from '../../icons/add'
 
 
 const EventPage = (props) => {
   const {name}= props
   const [openPortal, setOpenPortal] = useState(null)
+  const [showAddHighlight, setShowAddHighlight] = useState(null)
 
   const hightlights = ['1','2','3','4','5','6']
 
@@ -19,16 +21,25 @@ const EventPage = (props) => {
 
   function addVideo() {
     console.log(`add vid`)
+    
+
   }
 
-  const vidPlayback = <div className='w-auto z-5 mx-auto my-0'>
-    <video width="640" height="360" controls>
-  <source src={vid} type="video/mp4"/>
-  Your browser does not support the video tag.
-</video>
+  const hightlightForm = <div>
+    this is the hightlight
   </div>
 
-console.log(openPortal ,`this opens the portal`)
+  const addHighlight = openPortal? <FullPortal closePortal={()=>setOpenPortal(false)}>                                  {hightlightForm}
+                                    </FullPortal> : ''
+
+  const vidPlayback = <div className='w-auto z-5 mx-auto my-0'>
+                       <video width="640" height="360" controls>
+                          <source src={vid} type="video/mp4"/>Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+  console.log(openPortal ,`this opens the portal`)
+
   const video = openPortal ? <FullPortal closePortal={()=>setOpenPortal(false)}>{vidPlayback}</FullPortal> : ''
 
   const videos = hightlights.length ?  hightlights.map((hightlight,index)=>(
@@ -36,6 +47,8 @@ console.log(openPortal ,`this opens the portal`)
         <img src="" alt={`${hightlight[index]}`} />
     </div>
   )) : <div>no videos yet</div>
+
+
   return (
     <div>
       	<Header 
@@ -48,8 +61,8 @@ console.log(openPortal ,`this opens the portal`)
         <div>
           <div className='flex justify-between'>
           <h2>Watch hightlights</h2>
-          <TooltipComponent text={'upload hightlight'}>
-          <ButtonSm btnClick={addVideo} text={'+'}/>
+          <TooltipComponent comp={<ButtonSm icon={<AddIcon/>} action={addVideo} text={'+'}/>} text='upload hightlight'>
+          
           </TooltipComponent>
         
           </div>
@@ -63,6 +76,7 @@ console.log(openPortal ,`this opens the portal`)
          
         </div>
         {video}
+        {addHighlight}
     </div>
   )
 }
