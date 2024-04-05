@@ -9,7 +9,7 @@ import Sleep from '../icons/sleep';
 function stats() {
     return (
         <div className={classes.container}>
-            Personl Best
+           <h2>Personal Best</h2> 
             <div className={classes.statsBottomCont}>
                   <StatsBottom icon={<Energy/>} value={22894} txt={'Most steps'} unit={' steps'}></StatsBottom>  
                   <StatsBottom icon={<Steps/>} value={9} txt={'Most sleep'} unit={'hrs'}></StatsBottom>  

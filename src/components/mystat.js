@@ -24,7 +24,7 @@ function Mystat() {
                     </div>
                     <div className={classes.prof_subcont}>
                         {/* {user.name}  */}
-                        Alliu
+                        Aliu
                         <ButtonMd text='Edit'/>
                         {/* <button className={classes.prof_button}>Edit</button> */}
                     </div>
