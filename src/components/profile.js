@@ -43,10 +43,10 @@ function Profile() {
      </div> : ''
 
      const portal = showPortal ? <FullPortal>
-        <div className='fixed flex justify-center items-center w-[100%] bg-purple-600 h-[100%] opacity-75'>
+        <div className='fixed flex justify-center items-center w-[100%] bg-gray-600 h-[100%] bg-opacity-80'>
     
-        <div className='mx-auto grid grid-cols-5 gap-2 w-[115rem] h-[50rem] p-20' >
-            <div className="absolute top-2 right-2 cursor-pointer" onClick={()=>setShowPortal(false)}>
+        <div className='z-10 mx-auto grid grid-cols-5 gap-2 w-[115rem] h-[50rem] p-20 bg-green-800'  >
+            <div className="absolute z-10 top-2 right-2 cursor-pointer" onClick={()=>setShowPortal(false)}>
             <Close   />
 
             </div>

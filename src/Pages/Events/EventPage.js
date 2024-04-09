@@ -5,6 +5,7 @@ import FullPortal from '../../components/portal';
 import vid from '../../assets/video/footvid.mp4'
 import TooltipComponent from '../../components/Tooltip';
 import AddIcon from '../../icons/add'
+import InletModal from '../../components/layout/inletModal';
 
 
 const EventPage = (props) => {
@@ -29,10 +30,10 @@ const EventPage = (props) => {
     this is the hightlight
   </div>
 
-  const addHighlight = openPortal? <FullPortal closePortal={()=>setOpenPortal(false)}>                                  {hightlightForm}
-                                    </FullPortal> : ''
+  const addHighlight = showAddHighlight? <InletModal closePortal={()=>setOpenPortal(false)}>                                  {hightlightForm}
+                                    </InletModal> : ''
 
-  const vidPlayback = <div className='w-auto z-5 mx-auto my-0'>
+  const vidPlayback = <div className='w-[100%] h-[100%] flex items-center justify-center'>
                        <video width="640" height="360" controls>
                           <source src={vid} type="video/mp4"/>Your browser does not support the video tag.
                         </video>
@@ -40,7 +41,7 @@ const EventPage = (props) => {
 
   console.log(openPortal ,`this opens the portal`)
 
-  const video = openPortal ? <FullPortal closePortal={()=>setOpenPortal(false)}>{vidPlayback}</FullPortal> : ''
+  const video = openPortal ? <InletModal closePortal={()=>setOpenPortal(false)}>{vidPlayback}</InletModal> : ''
 
   const videos = hightlights.length ?  hightlights.map((hightlight,index)=>(
     <div onClick={playVideo} className='w-[60%] h-[30rem] border cursor-pointer'>

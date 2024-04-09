@@ -5,6 +5,7 @@ import { Link, Outlet, useParams, Navigate } from "react-router-dom";
 import Search from "../../components/search";
 import Selector from "../../components/selector";
 import MapModal from "../../components/mapModal";
+import InletModal from "../../components/layout/inletModal";
 
 const SportPage = () => {
 
@@ -31,9 +32,9 @@ const SportPage = () => {
 		setShowModal(false)
 	}
 
-	const mapModal = showModal ? <div className="fixed bg-red-500 opacity-90 top-0 z-1 w-[100%] map-height " onClick={closeMap}>
+	const mapModal = showModal ? <InletModal opacity className="fixed bg-gray-500 bg-opacity-80 top-0 z-1 w-[100%] map-height " action={closeMap}>
 		<MapModal closeModal={closeMap}/> 
-		</div>: ''
+		</InletModal>: ''
 
 	const sportEvents = sampleSport.map((sp) => (
 		<SportCard showMapDirection={openMap} location={sp.location} start={sp.start} />

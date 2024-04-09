@@ -24,7 +24,7 @@ const SportCard = ({ location, start, showMapDirection }) => {
 				<div className="text-center">
 					<div>Location:{location} </div>
 					<div>Start Time: {start} </div>
-					<button onClick={openDirectionModal}>Direction </button>
+					<button className="cursor-pointer" onClick={openDirectionModal}>Direction </button>
 				</div>
 			</div>
 			
