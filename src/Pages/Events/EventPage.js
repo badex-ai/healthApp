@@ -41,7 +41,7 @@ const EventPage = (props) => {
 
   console.log(openPortal ,`this opens the portal`)
 
-  const video = openPortal ? <InletModal closePortal={()=>setOpenPortal(false)}>{vidPlayback}</InletModal> : ''
+  const video = openPortal ? <InletModal action={()=>setOpenPortal(false)}>{vidPlayback}</InletModal> : ''
 
   const videos = hightlights.length ?  hightlights.map((hightlight,index)=>(
     <div onClick={playVideo} className='w-[60%] h-[30rem] border cursor-pointer'>
