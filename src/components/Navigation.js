@@ -56,6 +56,20 @@ function Navigation(props) {
 					<li>
 						<NavLink
 							activeClassName="navActive"
+							to="/training"
+							className={({ isActive }) =>
+								isActive ? `${classes.navActive}` : `${classes.navtag}`
+							}
+						>
+							<div>
+								<Activities />
+							</div>
+							<div className={classes.nav_txt}>Training</div>
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							activeClassName="navActive"
 							to="/achievements"
 							className={({ isActive }) =>
 								isActive ? `${classes.navActive}` : `${classes.navtag}`

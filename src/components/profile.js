@@ -49,7 +49,7 @@ function Profile() {
 
      const singlePicViewer = openSinglePicView ? 
         <FullPortal   >
-            <div onClick={()=>setOpenSinglePicView(false)} className=' w-[100%] h-[100%] flex items-center justify-center bg-opacity-20 bg-red-500 z-2'> 
+            <div onClick={()=>setOpenSinglePicView(false)} className='fixed w-[100%] h-[100%] flex items-center justify-center bg-opacity-20 bg-red-500 z-2'> 
 
             <div className='flex relative w-[60%] h-[42rem] bg-green-400 items-center' >
                 <RoundBtn dimension='2rem' action={goToPreviousImage}>P</RoundBtn>
