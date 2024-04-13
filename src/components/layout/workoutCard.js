@@ -1,11 +1,13 @@
 import React from 'react'
+import { Link, Outlet, useParams, Navigate } from "react-router-dom";
+
 
 const WorkoutCard = ({name,imgSrc}) => {
   return (
-    <div className='w-[50rem] h-[30rem] bg-yellow-500'>
+    <Link to={`./${name}`} className='w-[50rem] h-[30rem] bg-yellow-500'>
         <img src="" alt="" />
         <div>{name}</div>
-    </div>
+    </Link>
   )
 }
 

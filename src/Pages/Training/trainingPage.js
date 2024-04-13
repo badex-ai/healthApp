@@ -5,8 +5,8 @@ import Search from '../../components/search';
 
 const TrainingPage = () => {
   const workouts = [
-		{ link: "upper body", name: "upper body" },
-		{ link: "lower body", name: "lower body" },
+		{ link: "upperBody", name: "upper body" },
+		{ link: "lowerBody", name: "lower body" },
 		{ link: 'cardio', name: "football" },
 		{ link: 'HIIT', name: "hiit" },
 		{ link: 'core', name: "core" },
