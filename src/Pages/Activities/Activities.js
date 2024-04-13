@@ -33,7 +33,7 @@ const Activities = () => {
 					<Search />,
 					<Selector name="LGA" array={["day", "week", "month", "year"]} />,
 				]}
-				title={"Activities"}
+				title={"Social Activities"}
 			></Header>
 			<div>
 				<div className="grid grid-cols-3 place-items-center gap-16">
