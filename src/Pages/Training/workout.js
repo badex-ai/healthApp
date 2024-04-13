@@ -8,7 +8,7 @@ const Workout = ({param}) => {
 
   const {workout} = useParams()
 
-  const videos
+  // const videos
   
   return (
     <div>
