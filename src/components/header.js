@@ -3,6 +3,7 @@ import classes from "./header.module.css";
 import Notif from "../icons/notification";
 import Selector from "./selector";
 import Search from "./search";
+import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
 
 function Header({ components, ...props }) {
 
@@ -23,7 +24,9 @@ function Header({ components, ...props }) {
 
 				<Selector name="duration" array={["day", "week", "month", "year"]} /> */}
 
-				<div className={classes.notification}>{<Notif />}</div>
+				<div className={classes.notification}>
+					<div className="w-4 h-4 bg-red-500 rounded-full absolute -top-1 right-2"></div>
+					{<Notif />}</div>
 			</div>
 		</div>
 	);

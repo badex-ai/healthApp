@@ -8,7 +8,7 @@ function Search() {
 			<div className={classes.searchbar}>
 				<div className={classes.search}>Search</div>
 				<div>
-					<input className="text-right" type="text"></input>
+					<input className="text-left" type="text"></input>
 				</div>
 				<div className={classes.searchIcon}>
 					<button>{<SearchIcon />}</button>

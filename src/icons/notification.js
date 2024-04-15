@@ -9,7 +9,7 @@ const Notification = () => {
 	}
 
 	const notif = notifOpen ? (
-		<div className="absolute top-16 right-0  block w-80 h-72 bg-white-500 border rounded-lg ">
+		<div className="absolute z-50 top-16 right-0  block w-[30rem] h-72 bg-white border rounded-lg ">
 			me and you
 		</div>
 	) : (
