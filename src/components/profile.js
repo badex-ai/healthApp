@@ -34,7 +34,7 @@ function Profile() {
         console.log('nextImage')
      }
 
-     const imgGall = [1,2,3,4,5,6,7,7,8]
+     const imgGall = [1,2,3,4,5,6,7,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
      
 
      const gridGallery = imgGall.map((img)=>{
@@ -74,7 +74,7 @@ function Profile() {
      const portal = showPortal ? <FullPortal>
         <div onClick={()=>setShowPortal(false)} className='fixed flex justify-center items-center w-[100%] bg-gray-600 h-[100%] bg-opacity-80'>
     
-        <div className='relative z-10 mx-auto grid grid-cols-5 gap-2 w-[115rem] h-[50rem] p-20 bg-green-800'  >
+        <div className='relative overflow-x-auto z-10 mx-auto grid grid-cols-5 gap-2 w-[115rem] h-[50rem] p-20 bg-green-800'  >
             <div className="absolute z-10 -top-2 -right-2 cursor-pointer" onClick={()=>setShowPortal(false)}>
             <Close   />
 
