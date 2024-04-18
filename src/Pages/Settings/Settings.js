@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 import Header from "../../components/header";
 import ButtonLg from "../../components/buttons/buttonMd";
+import Select from "../../components/atoms/select";
+import * as Separator from '@radix-ui/react-separator';
 
 const Settings = () => {
 	const [formData, setFormData] = useState('')
@@ -14,18 +16,48 @@ const Settings = () => {
 		<Header 
 				// date={date}
 				title={"Settings"}/>
-				<form>
-					<label>change Tagname</label>
+				<div className="bg-gray-500 text-2xl p-10 w-[100%] ">
+				<form  className="lg: w-[50%]" >
+					<div></div>
+					<h2>change Tagname</h2>
+					<Separator.Root className="bg-white m-4" />
 					
-					<label>	change difficulty</label>
+					<div>
+					<h2>	change difficulty</h2>
+					<div>	<lable>Intensity</lable>
+					<Select options={['easy','medium','difficult']}></Select></div>
+				
+				<div className="flex"><lable>Skill level</lable>
+					<Select options={['easy','medium','difficult']}></Select></div>
+					
+					<div><lable>Equipment</lable>
+					<Select options={['easy','medium','difficult']}></Select></div>
+					
+					<div>
+					<lable>Impact</lable>
+					<Select options={['easy','medium','difficult']}></Select>
+					</div>
+					</div>
+					
+				
+					
+					<Separator.Root className="bg-white m-4" />
+					
 				
 				
 					
-	<label>change password</label>
+					<div>
+					<h2>change password</h2>
 					
-					old password
-					New password
-					Confirm password
+					<label htmlFor="">old password</label>
+					
+					<label htmlFor="">New password</label>
+					
+
+					<label htmlFor="">Confirm password</label>
+					</div>
+				
+					
 
 
 
@@ -36,6 +68,8 @@ const Settings = () => {
 </div>
 
 				</form>
+				</div>
+				
 				
 	</div>;
 };

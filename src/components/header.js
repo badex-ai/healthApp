@@ -23,8 +23,8 @@ function Header({ components, ...props }) {
 				{/* <Search />
 
 				<Selector name="duration" array={["day", "week", "month", "year"]} /> */}
-
-				<div className={classes.notification}>
+	
+				<div className='w-[42px] h-[42px] rounded-full flex items-center justify-center relative border-white border cursor-pointer'>
 					<div className="w-4 h-4 bg-red-500 rounded-full absolute -top-1 right-2"></div>
 					{<Notif />}</div>
 			</div>
