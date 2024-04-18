@@ -5,6 +5,9 @@
 .map-height {
   height: calc(100vh - 60px);
 }
+/* label{
+  font-size: 2rem;
+} */
 
 .map-width{
 

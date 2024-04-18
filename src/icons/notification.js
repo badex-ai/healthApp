@@ -9,7 +9,7 @@ const Notification = () => {
 	}
 
 	const notif = notifOpen ? (
-		<div className="absolute z-50 top-16 right-0  block w-[30rem] h-72 bg-white border rounded-lg ">
+		<div className="absolute z-50 top-16 right-0  block w-[30rem] h-72 bg-white border rounded-lg rounded-tr-none  ">
 			me and you
 		</div>
 	) : (
@@ -18,7 +18,7 @@ const Notification = () => {
 
 	return (
 		<>
-			<div onClick={openNotification}>
+			<div className="relative cursor-pointer" onClick={openNotification}>
 				<svg
 					width="16"
 					height="16"
@@ -35,8 +35,9 @@ const Notification = () => {
 						fill="#FEFFFF"
 					/>
 				</svg>
+				{notif}
 			</div>
-			{notif}
+			
 		</>
 	);
 };
