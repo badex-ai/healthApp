@@ -8,6 +8,7 @@ import Settings from "../icons/settings";
 import Activities from "../icons/activities";
 import { NavLink, Link } from "react-router-dom";
 import React, { useContext } from "react";
+import TrainersPage from "../Pages/Trainers/trainersPage";
 import UserContext from "../context/user";
 // useContext
 
@@ -65,6 +66,20 @@ function Navigation(props) {
 								<Activities />
 							</div>
 							<div className={classes.nav_txt}>Training</div>
+						</NavLink>
+					</li>
+					<li>
+						<NavLink
+							activeClassName="navActive"
+							to="/trainers"
+							className={({ isActive }) =>
+								isActive ? `${classes.navActive}` : `${classes.navtag}`
+							}
+						>
+							<div>
+							<Activities />
+							</div>
+							<div className={classes.nav_txt}>Trainers</div>
 						</NavLink>
 					</li>
 					<li>

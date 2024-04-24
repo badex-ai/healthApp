@@ -21,6 +21,7 @@ import SportPage from "./Pages/Activities/SportPage";
 import EventPage from "./Pages/Events/EventPage";
 import TrainingPage from "./Pages/Training/trainingPage"
 import Workout from "./Pages/Training/workout";
+import TrainersPage from "./Pages/Trainers/trainersPage";
 
 // import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
 			{
 				path: "me",
 				element: <Me />,
+			},
+			{
+				path: "trainers",
+				element: <TrainersPage/>,
 			},
 		],
 	},
