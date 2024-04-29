@@ -22,6 +22,7 @@ import EventPage from "./Pages/Events/EventPage";
 import TrainingPage from "./Pages/Training/trainingPage"
 import Workout from "./Pages/Training/workout";
 import TrainersPage from "./Pages/Trainers/trainersPage";
+import TrainerPage from "./Pages/Trainers/trainerPage";
 
 // import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
 			{
 				path: "trainers",
 				element: <TrainersPage/>,
+			},
+			{
+				path: "/trainers/:name",
+				element: <TrainerPage/>,
 			},
 		],
 	},
