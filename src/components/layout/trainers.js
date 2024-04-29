@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Trainers = ({name,weight,sex,img}) => {
+const Trainers = ({trainer}) => {
   return (
-    <Link to={"./name"} className=' relative w-[28rem] h-[40rem] bg-green-500'>
-      <img src={img} alt="" />
-      <div className='absolute bottom-12 right-8 bg-yellow-800 color'>
-        <div className='font-extrabold text-[3.5rem] uppercase'>{name}</div>
-        <div className='font-bold text-bg '>{weight}</div>
-        <div className='font-bold text-bg capitalize'>{sex}</div>
+    <Link to={trainer.id } className=' relative w-[28rem] h-[40rem] bg-green-500'>
+      <img src={trainer.img} alt={trainer.name} />
+      <div className='absolute bottom-12 right-8 bg-opacity-80 bg-black color p-6'>
+        <div className='font-extrabold text-[4.2rem] uppercase'>{trainer.name}</div>
+        <div className='font-bold text-4xl capitalize'>{trainer.sex}</div>
+        <div className='font-bold text-2xl '>{trainer.weight}</div>
       </div>
     </Link>
   )
