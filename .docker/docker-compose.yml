@@ -1,0 +1,33 @@
+version: "2.24"
+
+services: 
+  frontend: 
+    container_name: "summerBody_Frontend"
+    build: .
+    environment: 
+      - 
+    ports: 
+      - 8080:8080
+    networks: 
+      - summerBody_network
+
+  database: 
+    container_name: "summerBody_db"
+    image: postgres:latest
+    volumes: 
+      - summerBody_pg
+    environment: 
+      - POSTGRES_USER = postgres
+      - PORT = 5432
+      - POSTGRES_PASSWORD = postgres
+    ports:
+      - 5432:5432
+    networks: 
+      - summerBody_devs
+
+volumes: 
+  summerBody_pg:
+
+networks: 
+  summerBody_devs: 
+
