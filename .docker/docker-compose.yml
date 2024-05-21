@@ -10,6 +10,13 @@ services:
       - 8080:8080
     networks: 
       - summerBody_network
+    volumes:
+      - type: bind
+        source: "../"
+        target: "/frontend"
+  backend: 
+    container_name: "summerBody_backend"
+    # build: 
 
   database: 
     container_name: "summerBody_db"

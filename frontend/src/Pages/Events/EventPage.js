@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import Header from "../../components/header";
 import ButtonSm from '../../components/buttons/buttonSm';
 import FullPortal from '../../components/portal';
-import vid from '../../assets/video/footvid.mp4'
+// import vid from '../../assets/video/footvid.mp4'
 import TooltipComponent from '../../components/Tooltip';
 import AddIcon from '../../icons/add'
 import InletModal from '../../components/layout/inletModal';
@@ -34,9 +34,9 @@ const EventPage = (props) => {
                                     </InletModal> : ''
 
   const vidPlayback = <div className='w-[100%] h-[100%] flex items-center justify-center'>
-                       <video width="640" height="360" controls>
+                       {/* <video width="640" height="360" controls>
                           <source src={vid} type="video/mp4"/>Your browser does not support the video tag.
-                        </video>
+                        </video> */}
                       </div>
 
   console.log(openPortal ,`this opens the portal`)
