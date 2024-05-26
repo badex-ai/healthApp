@@ -5,7 +5,7 @@ import FullPortal from '../../components/portal';
 // import vid from '../../assets/video/footvid.mp4'
 import TooltipComponent from '../../components/Tooltip';
 import AddIcon from '../../icons/add'
-import InletModal from '../../components/layout/inletModal';
+import InletModal from "@/components/layout/inletModal";
 
 
 const EventPage = (props) => {
