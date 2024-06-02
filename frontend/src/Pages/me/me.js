@@ -11,6 +11,7 @@ import Header from "../../components/header";
 function Me() {
 	// const { user } = useAuth0();
 	// console.log(user);
+	//just so i can make a commit 
 
 	return (
 		<div >
@@ -18,7 +19,7 @@ function Me() {
 				// date={date}
 				title={"Event"}/>
         
-			
+		
 			<Profile/> 
 		
 		</div>
