@@ -16,7 +16,11 @@ services:
         target: "/frontend"
   backend: 
     container_name: "summerBody_backend"
-    # build: 
+    environment: 
+    depends_on: 
+      - database
+    networks:
+      - summerBody_devs
 
   database: 
     container_name: "summerBody_db"
